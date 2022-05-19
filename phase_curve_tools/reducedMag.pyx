@@ -12,5 +12,5 @@ ctypedef fused valid_arg:
 cdef _calcReducedMag(valid_arg mag, valid_arg helioDist, valid_arg obsDist):
     return mag - 5*np.log10(helioDist*obsDist)
 
-cdef calcReducedMag(valid_arg mag, valid_arg helioDist, valid_arg obsDist):
+def calcReducedMag(valid_arg mag, valid_arg helioDist, valid_arg obsDist):
     return _calcReducedMag(mag, helioDist, obsDist)
