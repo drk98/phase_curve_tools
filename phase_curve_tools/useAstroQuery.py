@@ -1,24 +1,24 @@
 from ast import Call
 
 import numpy as np
-from astroquery.jplhorizons import Horizons
+from astroquery.jplhorizons import HorizonsClass
 from astropy import units as u
 from typing import Callable
 from .hg import HG
 
-class HorAbsMags(Horizons):
+class HorAbsMags(HorizonsClass):
     """Wrapper for astroquries Horizons class. can calculate the absolute magnitude.
 
     :param mags: The mags of observations at the provided ephocs
     :type mags: np.ndarray
     """
 
-    def __init__(self, mags:np.ndarray) -> None:
+    def __init__(self, mags:np.ndarray, *args, **kwargs) -> None:
         """Constructor
         """
         self.mags:np.ndarray = mags
         eph = self.ephemerides()
-        super().__init__()
+        super().__init__(*args, **kwargs)
 
     def calcAbsMag(self, absMagCalcFunc:Callable = HG, G:float=None) -> np.ndarray:
         """calcAbsMag Function to calculate the absolute magnitudes. Will grab the data from horizons
