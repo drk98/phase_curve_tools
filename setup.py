@@ -4,7 +4,7 @@
 
 
 from setuptools import setup, find_packages, dist
-dist.Distribution().fetch_build_eggs(['Cython>=0.29.0', 'numpy>=1.22'])
+dist.Distribution().fetch_build_eggs(['Cython>=0.29.0', 'numpy>=1.20'])
 
 from Cython.Build import cythonize
 import numpy as np
@@ -15,9 +15,9 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = ['numpy>=1.22']
+requirements = ['numpy>=1.20']
 
-test_requirements = ['pytest>=3', 'numpy>=1.22']
+test_requirements = ['pytest>=3', 'numpy>=1.20']
 
 setup(
     setup_requires=[
