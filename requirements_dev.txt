@@ -8,6 +8,8 @@ coverage==4.5.4
 Sphinx==1.8.5
 twine==1.14.0
 numpy>=1.22.0
+astroquery>=0.4.1
+astropy>=4.0.0
 
 pytest==6.2.4
 black==21.7b0
