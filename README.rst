@@ -6,9 +6,6 @@ Phase Curve Tools
 .. image:: https://img.shields.io/pypi/v/phase_curve_tools.svg
         :target: https://pypi.python.org/pypi/phase_curve_tools
 
-.. image:: https://img.shields.io/travis/drk98/phase_curve_tools.svg
-        :target: https://travis-ci.com/drk98/phase_curve_tools
-
 .. image:: https://readthedocs.org/projects/phase-curve-tools/badge/?version=latest
         :target: https://phase-curve-tools.readthedocs.io/en/latest/?version=latest
         :alt: Documentation Status
