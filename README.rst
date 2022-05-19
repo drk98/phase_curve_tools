@@ -13,8 +13,8 @@ Phase Curve Tools
         :target: https://phase-curve-tools.readthedocs.io/en/latest/?version=latest
         :alt: Documentation Status
 
-.. image:: https://github.com/drk98/phase_curve_tools/actions/workflows/test.yml/badge.svg
-        :target: https://github.com/drk98/phase_curve_tools/actions/workflows/test.yml
+.. image:: https://github.com/drk98/phase_curve_tools/actions/workflows/python-app.yml/badge.svg
+        :target: https://github.com/drk98/phase_curve_tools/actions/workflows/python-app.yml
         :alt: Test Results
 
 
