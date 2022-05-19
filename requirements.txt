@@ -1,5 +1,5 @@
 astroquery>=0.4.1
 astropy>=4.0.0
 cython>=0.29.0
-numpy>=1.11.3
+numpy>=1.20.0
 
