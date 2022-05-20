@@ -31,7 +31,7 @@ import phase_curve_tools
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode', 'sphinxcontrib.bibtex', 'sphinx.ext.mathjax']
+extensions = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode', 'sphinxcontrib.bibtex', 'sphinx.ext.mathjax', 'sphinx_autodoc_typehints']
 bibtex_bibfiles = ['refs.bib']
 mathjax_path="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
