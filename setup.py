@@ -58,4 +58,5 @@ setup(
     ext_modules = modules,
     package_data={"phase_curve_tools": ["phase_curve_tools/*.h", "phase_curve_tools/*.pyx"]},
     include_dirs = [np.get_include()],
+    extra_compile_args=["-O3"]
 )
