@@ -105,7 +105,7 @@ class BestFit:
         :return: The phase angles (deg)
         :rtype: np.ndarray
         """
-        pass
+        return np.arccos((helioDist**2 + obsDist**2 + sunObsDist**2)/(2*helioDist*obsDist))
 
             
     def fitHG(self, H_0:float=None, G_0:float=.15, HRange:Tuple=(4.69236933828342, 29.276432904419803), GRange:Tuple=(-0.301744075798055, 0.9073912874142601))->HGResult:
