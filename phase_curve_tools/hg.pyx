@@ -58,8 +58,10 @@ cdef _HG(valid_arg apmag, valid_arg helioDist, valid_arg obsDist, valid_arg phas
 
     return apmag - (5 * np.log10(helioDist*obsDist) - 2.5*np.log10(phaseInt))
 
-def HG(valid_arg apmag, valid_arg helioDist, valid_arg obsDist, valid_arg phaseAngle ,const cython.float G, const cython.int simple = True):
-    """Calculate the absolute mags for an object from the Bowell HG system :cite:p: '1989aste.conf..524B'
+def bowellCalcAbsMag(valid_arg apmag, valid_arg helioDist, valid_arg obsDist, valid_arg phaseAngle ,const cython.float G, const cython.int simple = True):
+    """Calculate the absolute mags for an object from the Bowell HG system\ :footcite:p:`bowellHG`
+    
+    
 
     :param apmag: The apparent magnitudes to use
     :type apmag: np.ndarray

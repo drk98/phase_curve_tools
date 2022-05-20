@@ -4,7 +4,7 @@ import numpy as np
 from astroquery.jplhorizons import HorizonsClass
 from astropy import units as u
 from typing import Callable
-from .hg import HG
+from .hg import bowellCalcAbsMag
 
 class HorAbsMags(HorizonsClass):
     """Wrapper for astroquries Horizons class. can calculate the absolute magnitude.
@@ -20,7 +20,7 @@ class HorAbsMags(HorizonsClass):
         eph = self.ephemerides()
         super().__init__(*args, **kwargs)
 
-    def calcAbsMag(self, absMagCalcFunc:Callable = HG, G:float=None) -> np.ndarray:
+    def calcAbsMag(self, absMagCalcFunc:Callable = bowellCalcAbsMag, G:float=None) -> np.ndarray:
         """calcAbsMag Function to calculate the absolute magnitudes. Will grab the data from horizons
 
         :param absMagCalcFunc: The function that calcualtes the absolute magnitude, defaults to HG
