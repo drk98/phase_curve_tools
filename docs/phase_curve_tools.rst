@@ -4,6 +4,14 @@ phase\_curve\_tools package
 Submodules
 ----------
 
+phase\_curve\_tools.bestFit module
+----------------------------------
+
+.. automodule:: phase_curve_tools.bestFit
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 phase\_curve\_tools.hg module
 -----------------------------
 
@@ -67,3 +75,6 @@ Module contents
    :members:
    :undoc-members:
    :show-inheritance:
+
+
+.. footbibliography::
