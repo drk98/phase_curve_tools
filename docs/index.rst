@@ -1,5 +1,5 @@
 Welcome to Phase Curve Tools's documentation!
-======================================
+=============================================
 
 .. toctree::
    :maxdepth: 2
