@@ -12,6 +12,7 @@ astroquery>=0.4.1
 astropy>=4.0.0
 sphinx-autodoc-typehints==1.11.1
 sphinxcontrib-bibtex==2.4.2
+scipy
 
 pytest==6.2.4
 black==21.7b0
