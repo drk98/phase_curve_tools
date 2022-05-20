@@ -10,6 +10,8 @@ twine==1.14.0
 numpy>=1.20.0
 astroquery>=0.4.1
 astropy>=4.0.0
+sphinx-autodoc-typehints==1.11.1
+sphinxcontrib-bibtex==2.4.2
 
 pytest==6.2.4
 black==21.7b0

@@ -23,6 +23,13 @@ sys.path.insert(0, os.path.abspath('..'))
 
 import phase_curve_tools
 
+import os
+on_rtd = os.environ.get('READTHEDOCS') == 'True'
+if on_rtd:
+    html_theme = 'default'
+else:
+    html_theme = 'nature'
+
 # -- General configuration ---------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -35,6 +42,7 @@ extensions = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode', 'sphinxcontrib.bibtex
 bibtex_bibfiles = ['refs.bib']
 mathjax_path="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
+autodoc_mock_imports = ["phase_curve_tools"]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
