@@ -53,7 +53,7 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/drk98/phase_curve_tools',
-    version='0.1.0',
+    version='0.2.0',
     zip_safe=False,
     ext_modules = modules,
     package_data={"phase_curve_tools": ["phase_curve_tools/*.h", "phase_curve_tools/*.pyx"]},
