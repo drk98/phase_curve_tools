@@ -49,7 +49,7 @@ setup(
     include_package_data=True,
     keywords='phase_curve_tools',
     name='phase_curve_tools',
-    # packages=find_packages(include=['phase_curve_tools', 'phase_curve_tools.*']),
+    packages=find_packages(include=['phase_curve_tools', 'phase_curve_tools.*']),
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/drk98/phase_curve_tools',
