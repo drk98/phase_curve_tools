@@ -19,7 +19,7 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('..'))
+
 
 import phase_curve_tools
 
@@ -28,6 +28,7 @@ on_rtd = os.environ.get('READTHEDOCS') == 'True'
 if on_rtd:
     html_theme = 'default'
 else:
+    sys.path.insert(0, os.path.abspath('..'))
     html_theme = 'nature'
 
 # -- General configuration ---------------------------------------------
