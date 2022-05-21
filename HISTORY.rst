@@ -2,6 +2,11 @@
 History
 =======
 
+0.3.2 (2022-05-20)
+------------------
+
+* Added the number of observations to HGresult
+
 0.3.1 (2022-05-20)
 ------------------
 

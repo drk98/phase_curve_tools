@@ -22,6 +22,8 @@ class HGResult:
     :type success: bool
     :param atEdge: If the derived G value is at the edge of the porvided G bounds
     :type atEdge: bool
+    :param n: The number of observations used
+    :type n: int
     """
 
     H: float
@@ -30,6 +32,7 @@ class HGResult:
     sigG: float = 0
     success: bool = False
     atEdge: bool = False
+    n: int = 0
 
     @property
     def fullSuccess(self) -> bool:
@@ -38,7 +41,7 @@ class HGResult:
         :getter: Returns if there was a full succedd
         :type: bool
         """
-        return self.success and self.atEdge
+        return self.success and not self.atEdge
 
 
 class BestFit:
@@ -101,7 +104,7 @@ class BestFit:
             self.phaseAngle = BestFit.calcPhaseAngle(self.helioDist, self.obsDist)
 
         self.mags: np.ndarray = mags
-        self.errors:np.ndarray = errors
+        self.errors: np.ndarray = errors
 
         self.reducedMagHG: np.ndarray = None
 
@@ -138,7 +141,7 @@ class BestFit:
         G_0: float = 0.15,
         HRange: Tuple = (4.69236933828342, 29.276432904419803),
         GRange: Tuple = (-0.301744075798055, 0.9073912874142601),
-        errorSimulation: int = 30
+        errorSimulation: int = 30,
     ) -> HGResult:
         r"""fitHG Fit the data to the Bowell HG system\ :footcite:p:`bowellHG`.
 
@@ -175,19 +178,26 @@ class BestFit:
 
                 e = np.random.normal(0, self.errors)
 
-                runres = minimize(self._HGminimize_target, x0=[H_0, G_0], bounds=(HRange, GRange), args=(e,))
+                runres = minimize(
+                    self._HGminimize_target,
+                    x0=[H_0, G_0],
+                    bounds=(HRange, GRange),
+                    args=(e,),
+                )
                 Hs.append(runres.x[0])
                 Gs.append(runres.x[1])
 
             Herr = np.std(Hs)
             Gerr = np.std(Gs)
 
-        return HGResult(res.x[0], res.x[1], Herr, Gerr, res.success, res.x[1] in GRange)
+        return HGResult(res.x[0], res.x[1], Herr, Gerr, res.success, res.x[1] in GRange, len(self.mags))
 
-    def _HGminimize_target(self, _hg: Tuple[float, float], error:Union[np.ndarray, float]=0) -> float:
+    def _HGminimize_target(
+        self, _hg: Tuple[float, float], error: Union[np.ndarray, float] = 0
+    ) -> float:
 
         adj_mag = calcPhaseCurve(_hg[0], _hg[1], self.phaseAngle)
         return np.sqrt(
-            np.sum(np.power(self.reducedMagHG+error - adj_mag, 2))
+            np.sum(np.power(self.reducedMagHG + error - adj_mag, 2))
             / (len(self.reducedMagHG) - 1)
         )
