@@ -2,7 +2,7 @@
 
 __author__ = """Daniel Kramer"""
 __email__ = 'drk98@nau.edu'
-__version__ = '0.2.0'
+__version__ = '0.2.1'
 
 
 from .hg import bowellCalcAbsMag, calcPhaseCurve
