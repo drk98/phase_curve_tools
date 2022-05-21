@@ -55,7 +55,7 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/drk98/phase_curve_tools',
-    version='0.2.1',
+    version='0.3.0',
     zip_safe=False,
     ext_modules = modules,
     include_dirs = [np.get_include()],
