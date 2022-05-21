@@ -2,12 +2,19 @@
 History
 =======
 
+0.3.0 (2022-05-20)
+------------------
+
+* Added errors to bestfit
+
 0.2.1 (2022-05-20)
 ------------------
+
 * Updated manifest to include cython code
 
 0.2.0 (2022-05-20)
 ------------------
+
 * Added Bowell HG code
 * Added Bowell HG fitting
 
