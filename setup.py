@@ -19,8 +19,10 @@ requirements = ['numpy>=1.20.0']
 
 test_requirements = ['pytest>=3', 'numpy>=1.20.0']
 
+header_files = ["phase_curve_tools/constants.h"]
+cython_files = ["phase_curve_tools/hg.pyx", "phase_curve_tools/reducedMag.pyx"]
 
-modules=cythonize("phase_curve_tools/*.pyx")
+modules=cythonize(cython_files)
 
 setup(
     setup_requires=[
@@ -56,7 +58,6 @@ setup(
     version='0.2.0',
     zip_safe=False,
     ext_modules = modules,
-    package_data={"phase_curve_tools": ["phase_curve_tools/*.h", "phase_curve_tools/*.pyx"]},
     include_dirs = [np.get_include()],
     extra_compile_args=["-O3"]
 )
