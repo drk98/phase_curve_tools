@@ -8,4 +8,4 @@ __version__ = '0.3.0'
 from .hg import bowellCalcAbsMag, calcPhaseCurve
 from .reducedMag import calcReducedMag
 from .useAstroQuery import HorAbsMags
-from .bestFit import BestFit
+from .bestFit import BestFit, HGResult
