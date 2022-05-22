@@ -96,7 +96,7 @@ def calcPhaseCurve(float H, float G, valid_arg phaseAngle):
     return _calcPhaseCurve(H, G, phaseAngle)
 
 def bowellCalcAbsMag(valid_arg apmag, valid_arg helioDist, valid_arg obsDist, valid_arg phaseAngle ,const cython.float G, const cython.int simple = True):
-    """Calculate the absolute mags for an object from the Bowell HG system\ :footcite:p:`bowellHG`
+    r"""Calculate the absolute mags for an object from the Bowell HG system\ :footcite:p:`bowellHG`
     
     
 
