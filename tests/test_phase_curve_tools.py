@@ -5,7 +5,7 @@
 import pytest
 
 
-from phase_curve_tools import bowellCalcAbsMag, calcHG1G2
+from phase_curve_tools import bowellCalcAbsMag, calcHG1G2, calcHG12
 
 
 
@@ -19,3 +19,7 @@ def test_hg():
 def test_hg1g2():
 
     assert calcHG1G2(18.168, 1.997, 1.187, 22.9769, .1, .2) == pytest.approx(15.201,.05)
+
+def test_hg12():
+
+    assert calcHG12(18.168, 1.997, 1.187, 22.9769, .15) == pytest.approx(15.201,.05)

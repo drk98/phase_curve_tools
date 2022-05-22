@@ -2,11 +2,7 @@ cimport numpy as np
 import numpy as np
 cimport cython
 
-
-ctypedef fused valid_arg:
-    np.ndarray
-    cython.float
-    cython.double
+from phase_curve_tools.valid_arg cimport valid_arg
 
 
 cdef extern from "constants.h":

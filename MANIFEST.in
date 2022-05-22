@@ -9,5 +9,6 @@ recursive-exclude * __pycache__
 recursive-exclude * *.py[co]
 recursive-include phase_curve_tools *.pyx
 recursive-include phase_curve_tools *.h
+recursive-include phase_curve_tools *.pxd
 
 recursive-include docs *.rst conf.py Makefile make.bat *.jpg *.png *.gif
