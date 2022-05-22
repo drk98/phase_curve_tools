@@ -2,7 +2,6 @@ cimport numpy as np
 import numpy as np
 cimport cython
 
-#cython: language_level=3
 
 ctypedef fused valid_arg:
     np.ndarray

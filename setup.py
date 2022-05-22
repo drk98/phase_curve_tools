@@ -20,9 +20,9 @@ requirements = ['numpy>=1.20.0']
 test_requirements = ['pytest>=3', 'numpy>=1.20.0']
 
 header_files = ["phase_curve_tools/constants.h"]
-cython_files = ["phase_curve_tools/hg.pyx", "phase_curve_tools/reducedMag.pyx"]
+cython_files = ["phase_curve_tools/*.pyx"]
 
-modules=cythonize(cython_files)
+modules=cythonize(cython_files, language_level = "3")
 
 setup(
     setup_requires=[
