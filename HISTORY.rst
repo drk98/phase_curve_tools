@@ -2,6 +2,12 @@
 History
 =======
 
+0.4.3 (2022-06-07)
+------------------
+
+* Fixed type errors in hg
+* Fixed name errors in bestfit
+
 0.4.1 (2022-05-22)
 ------------------
 
