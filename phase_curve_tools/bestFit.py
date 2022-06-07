@@ -159,11 +159,11 @@ class BestFit:
         :rtype: HGResult
         """
 
-        if self.reducedMag is None:
+        if self.reducedMagHG is None:
             self.reducedMagHG = self.mags - 5 * np.log10(self.helioDist * self.obsDist)
 
         if H_0 is None:
-            H_0 = self.reducedMag[np.argmin(self.phaseAngle)]
+            H_0 = self.reducedMagHG[np.argmin(self.phaseAngle)]
 
         res = minimize(self._HGminimize_target, x0=[H_0, G_0], bounds=(HRange, GRange))
 
