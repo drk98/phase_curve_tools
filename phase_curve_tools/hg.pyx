@@ -67,7 +67,8 @@ cdef _HG(valid_arg apmag, valid_arg helioDist, valid_arg obsDist, valid_arg phas
 
 
 cdef _calcPhaseCurve(float H, float G, valid_arg phaseAngle):
-    cdef float a1, a2, phi1, phi2
+    cdef float a1, a2
+    cdef valid_arg phi1, phi2
 
     a1 = np.power(10, -H/2.5) / (1+(G/(1-G)))
     a2 = G*a1/(1-G)
