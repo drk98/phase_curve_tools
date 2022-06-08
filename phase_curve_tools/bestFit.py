@@ -165,7 +165,8 @@ class BestFit:
         if H_0 is None:
             H_0 = self.reducedMagHG[np.argmin(self.phaseAngle)]
 
-        res = minimize(self._HGminimize_target, x0=[H_0, G_0], bounds=(HRange, GRange))
+        # The Powell method for the astronomer from Lowell, Bowell
+        res = minimize(self._HGminimize_target, x0=[H_0, G_0], bounds=(HRange, GRange), method='Powell')
 
         Herr = 0
         Gerr = 0
@@ -183,6 +184,7 @@ class BestFit:
                     x0=[H_0, G_0],
                     bounds=(HRange, GRange),
                     args=(e,),
+                    method='Powell'
                 )
                 Hs.append(runres.x[0])
                 Gs.append(runres.x[1])
