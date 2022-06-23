@@ -39,6 +39,18 @@ class HorAbsMags(HorizonsClass):
 
         return absMagCalcFunc(self.mags, helioDist, obsDist, phaseAngle, G)
     
+    @property
+    def heliodist(self):
+        self.eph["r"]
+    
+    @property
+    def obsdist(self):
+        self.eph["delta"]
+
+    @property
+    def phaseAngle(self):
+        self.eph["alpha"]
+
     def getLightTimeCorrection(self, outputUnit:u = u.day)-> np.ndarray:
         """getLightTimeCorrection Calculate the light time corrction for the observations
 
