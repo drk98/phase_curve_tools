@@ -17,8 +17,9 @@ class HorAbsMags(HorizonsClass):
         """Constructor
         """
         self.mags:np.ndarray = mags
-        eph = self.ephemerides()
         super().__init__(*args, **kwargs)
+        self.eph = self.ephemerides()
+
 
     def calcAbsMag(self, absMagCalcFunc:Callable = bowellCalcAbsMag, G:float=None) -> np.ndarray:
         """calcAbsMag Function to calculate the absolute magnitudes. Will grab the data from horizons
@@ -46,4 +47,4 @@ class HorAbsMags(HorizonsClass):
         :return: The light time correction for each ephoch
         :rtype: np.ndarray
         """
-        return self.eph["lighttime"].to(outputUnit).data
+        return self.eph["lighttime"].to(outputUnit).value
