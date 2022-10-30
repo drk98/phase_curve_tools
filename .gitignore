@@ -108,3 +108,5 @@ ENV/
 #cython output c files
 phase_curve_tools/hg.c
 phase_curve_tools/reducedMag.c
+phase_curve_tools/hg12.c
+phase_curve_tools/hg1g2.c
