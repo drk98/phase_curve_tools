@@ -21,6 +21,10 @@ A Python package for asteroid phase curves
 * Free software: MIT license
 * Documentation: https://phase-curve-tools.readthedocs.io.
 
+Installation
+--------
+
+``pip install phase_curve_tools``
 
 Features
 --------
